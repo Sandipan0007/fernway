@@ -1,5 +1,5 @@
 {
-  "name": "natours",
+  "name": "fernway",
   "version": "1.0.0",
   "description": "Learning node, express and mongoDB",
   "main": "app.js",
@@ -8,9 +8,9 @@
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
-  "author": "Jonas Schmedtmann",
+  "author": "Sandipan Chakraborty",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
