@@ -14,13 +14,14 @@ export const signup = async (name, email, password, passwordConfirm) => {
         passwordConfirm
       }
     });
-
+    console.log(res.data.status);
     if (res.data.status === 'success') {
       showAlert('success', 'sign up in successfully!');
-      window.setTimeout(() => {
-        location.replace('/');
-      }, 1500);
-    }
+      console.log('Successful');
+    //   window.setTimeout(() => {
+    //     location.replace('/');
+    //   }, 1500);
+    // }
   } catch (err) {
     showAlert('error', err.response.data.message);
   }
