@@ -8595,28 +8595,30 @@ function () {
 
           case 3:
             res = _context.sent;
+            console.log(res.data.status);
 
             if (res.data.status === 'success') {
               (0, _alerts.showAlert)('success', 'sign up in successfully!');
+              console.log('Successful');
               window.setTimeout(function () {
                 location.replace('/');
               }, 1500);
             }
 
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[0, 8]]);
   }));
 
   return function signup(_x, _x2, _x3, _x4) {
@@ -9040,11 +9042,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // DOM ELEMENTS
 var mapBox = document.getElementById('map');
 var loginForm = document.querySelector('.form--login');
-var signupForm = document.querySelector('.form__signup');
+var signupForm = document.querySelector('.form--signup');
 var logOutBtn = document.querySelector('.nav__el--logout');
 var userDataForm = document.querySelector('.form-user-data');
 var userPasswordForm = document.querySelector('.form-user-password');
-var bookBtn = document.getElementById('book-tour'); // DELEGATION
+var bookBtn = document.getElementById('book-tour'); // window.alert('Application Loaded');
+// DELEGATION
 
 if (mapBox) {
   var locations = JSON.parse(mapBox.dataset.locations);
@@ -9056,13 +9059,15 @@ if (loginForm) loginForm.addEventListener('submit', function (e) {
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   (0, _login.login)(email, password);
-});
+}); // console.log('Application', signupForm);
+
 if (signupForm) signupForm.addEventListener('submit', function (e) {
   e.preventDefault();
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
   var passwordConfirm = document.getElementById('passwordConfirm').value;
+  console.log((name, email, password, passwordConfirm));
   (0, _signup.signup)(name, email, password, passwordConfirm);
 });
 if (logOutBtn) logOutBtn.addEventListener('click', _login.logout);
@@ -9149,7 +9154,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57135" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
