@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
@@ -90,3 +91,4 @@ app.all('*', (req, res, next) => {
 app.use(globalErrorHandler);
 
 module.exports = app;
+// "prebuild": "npm run watch:js"
