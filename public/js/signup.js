@@ -18,8 +18,8 @@ export const signup = async (name, email, password, passwordConfirm) => {
     if (res.data.status === 'success') {
       showAlert('success', 'sign up in successfully!');
       console.log('Successful');
-      window.setTimeout(() => {
-        location.replace('/');
+      setTimeout(() => {
+        window.location.replace('/');
       }, 1500);
     }
   } catch (err) {
