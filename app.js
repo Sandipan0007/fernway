@@ -92,10 +92,3 @@ app.use(globalErrorHandler);
 
 module.exports = app;
 // "prebuild": "npm run watch:js"
-
-// "dev": "nodemon server.js",
-//     "start:prod": "NODE_ENV=production node server.js",
-//     "debug": "ndb server.js",
-//     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-//     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-//     "build": "npm start"
