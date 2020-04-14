@@ -4,6 +4,7 @@ import { showAlert } from './alerts';
 
 export const signup = async (name, email, password, passwordConfirm) => {
   try {
+    console.log(`${name}, ${email}, ${password}, &{passwordConfirm}`);
     const res = await axios({
       method: 'POST',
       url: '/api/v1/users/signup',
@@ -14,7 +15,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
         passwordConfirm
       }
     });
-    console.log(res.data.status);
+    console.log('signup res', res);
     if (res.data.status === 'success') {
       // const path = window.location.href.split('/signup')[0];
       showAlert('success', 'Sign Up successfully!');
