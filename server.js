@@ -19,7 +19,8 @@ mongoose
   .connect(DB, {
     keepAlive: 1,
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
   })
   .then(() => console.log('DB connection successful!'));
 
