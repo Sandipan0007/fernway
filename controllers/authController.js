@@ -45,7 +45,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm
   });
 
-  User.save();
+  newUser.save();
 
   const url = `${req.protocol}://${req.get('host')}/me`;
   // console.log(url);
