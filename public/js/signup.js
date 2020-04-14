@@ -16,11 +16,11 @@ export const signup = async (name, email, password, passwordConfirm) => {
     });
     console.log(res.data.status);
     if (res.data.status === 'success') {
-      const path = window.location.href.split('/signup')[0];
+      // const path = window.location.href.split('/signup')[0];
       showAlert('success', 'Sign Up successfully!');
       console.log('Successful');
       setTimeout(() => {
-        window.location.assign(path);
+        location.assign('/login');
       }, 1500);
     }
   } catch (err) {
