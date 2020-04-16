@@ -18,7 +18,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
     console.log('signup res', res);
     if (res.data.status === 'success') {
       // const path = window.location.href.split('/signup')[0];
-      showAlert('success', 'Sign Up successfully!');
+      showAlert('success', 'SignUp Successfull!');
       console.log('Successful');
       setTimeout(() => {
         location.assign('/login');
